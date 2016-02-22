@@ -388,6 +388,8 @@ namespace Framework.AssetLibrary.Imaging
         {
             try
             {
+                Image tempImage = (Image)rawImage.Clone();
+
                 Encoder myEncoder = Encoder.Quality;
 
                 EncoderParameters myEncoderParameters = new EncoderParameters(1);
@@ -398,7 +400,7 @@ namespace Framework.AssetLibrary.Imaging
 
                 MemoryStream stream = new MemoryStream();
 
-                rawImage.Save(stream, imageFormat.ToImageCodecInfo(), myEncoderParameters);
+                tempImage.Save(stream, imageFormat.ToImageCodecInfo(), myEncoderParameters);
 
                 Bitmap compressedBitmap = new Bitmap(stream);
 
