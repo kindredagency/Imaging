@@ -13,7 +13,7 @@
   </SpellChecker>
 <HelpConfigurations selected="HelpFile">
   <HelpConfiguration name="HelpFile">
-    <OutputPath>.\Help</OutputPath>
+    <OutputPath>..\..\..\Helpfiles</OutputPath>
     <HelpFileName>Framework.AssetLibrary.Imaging</HelpFileName>
     <ImageFolderPath />
     <HtmlFormats>
@@ -35,7 +35,9 @@
     <ResolveCrefLinks>true</ResolveCrefLinks>
     <HeaderText />
     <FooterText />
-    <SelectedProjects />
+    <SelectedProjects>
+      <SelectedProject>Framework.AssetLibrary.Imaging</SelectedProject>
+    </SelectedProjects>
   </HelpConfiguration>
 </HelpConfigurations>
 </GhostDoc>
