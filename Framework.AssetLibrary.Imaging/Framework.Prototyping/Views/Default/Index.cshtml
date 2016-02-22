@@ -13,9 +13,21 @@
 
     string imagePath = Server.MapPath("~/Images/sample.jpg");
 
+
     Image image = ImageFactory.Read(imagePath);
 
-    var optimizedImage = image.Optimize(ImageFormat.Jpeg, ImageQuality.UltraLow);  
+    image.Optimize(ImageFormat.Jpeg, ImageQuality.UltraLow);
+
+    image.Save("d:\\test1.jpeg", ImageFormat.Jpeg);
+
+
+
+
+    Image optimizedImage = ImageFactory.Read(imagePath);
+
+    optimizedImage = image.Optimize(ImageFormat.Jpeg, ImageQuality.Low);
+
+    optimizedImage.Save("d:\\test2.jpeg", ImageFormat.Jpeg);
 
 }
 
