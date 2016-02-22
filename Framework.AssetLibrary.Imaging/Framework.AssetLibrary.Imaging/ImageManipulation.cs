@@ -378,13 +378,13 @@ namespace Framework.AssetLibrary.Imaging
         }
 
         /// <summary>
-        /// Optimizes the specified raw image. (Compresses an image based on quality)
+        /// Optimizes the specified raw image.
         /// </summary>
         /// <param name="rawImage">The raw image.</param>
         /// <param name="imageFormat">The image format.</param>
         /// <param name="quality">The quality.</param>
         /// <returns>Image.</returns>
-        public Image Optimize(Image rawImage, ImageFormat imageFormat, ImageQuality quality)
+        public Image Optimize(Image rawImage, ImageFormat imageFormat, long quality)
         {
             try
             {
@@ -394,7 +394,7 @@ namespace Framework.AssetLibrary.Imaging
 
                 EncoderParameters myEncoderParameters = new EncoderParameters(1);
 
-                EncoderParameter myEncoderParameter = new EncoderParameter(myEncoder, (long)quality);
+                EncoderParameter myEncoderParameter = new EncoderParameter(myEncoder, quality);
 
                 myEncoderParameters.Param[0] = myEncoderParameter;
 
@@ -410,6 +410,18 @@ namespace Framework.AssetLibrary.Imaging
             {
                 return new Bitmap(ImageFactory.Draw(ex.Message));
             }
+        }
+
+        /// <summary>
+        /// Optimizes the specified raw image.
+        /// </summary>
+        /// <param name="rawImage">The raw image.</param>
+        /// <param name="imageFormat">The image format.</param>
+        /// <param name="quality">The quality.</param>
+        /// <returns>System.Drawing.Image.</returns>
+        public Image Optimize(Image rawImage, ImageFormat imageFormat, ImageQuality quality)
+        {
+            return Optimize(rawImage, imageFormat, (long)quality);
         }
     }
 }

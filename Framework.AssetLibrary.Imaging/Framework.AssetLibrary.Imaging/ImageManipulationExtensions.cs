@@ -166,6 +166,22 @@ namespace Framework.AssetLibrary.Imaging
         }
 
         /// <summary>
+        /// Optimizes the specified image format.
+        /// </summary>
+        /// <param name="image">The image.</param>
+        /// <param name="imageFormat">The image format.</param>
+        /// <param name="quality">The quality. A value from 0 to 100</param>
+        /// <returns>Image.</returns>
+        public static Image Optimize(this Image image, ImageFormat imageFormat, long quality)
+        {
+            if ((quality < 0) || (quality > 100))
+                throw new System.Exception("Invalid quality value, quality value can range between 1 to 100");
+
+            ImageManipulation imageManipulation = new ImageManipulation();
+            return imageManipulation.Optimize(image, imageFormat, quality);
+        }
+
+        /// <summary>
         /// Optimizes the specified image format based on the specified quality
         /// </summary>
         /// <param name="image">The image.</param>

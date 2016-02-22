@@ -16,12 +16,12 @@
 
     Image image = ImageFactory.Read(imagePath);
 
-    image.Optimize(ImageFormat.Jpeg, ImageQuality.UltraLow);    
+    image.Optimize(ImageFormat.Jpeg, ImageQuality.UltraLow);
 
 
     Image optimizedImage = ImageFactory.Read(imagePath);
 
-    optimizedImage = image.Optimize(ImageFormat.Jpeg, ImageQuality.Low);   
+    optimizedImage = image.Optimize(ImageFormat.Jpeg, 20);   
 
 }
 
