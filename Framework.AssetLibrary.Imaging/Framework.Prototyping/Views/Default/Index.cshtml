@@ -15,98 +15,9 @@
 
     Image image = ImageFactory.Read(imagePath);
 
-    var optimizedImage = image.Optimize(ImageFormat.Jpeg, ImageQuality.Web);
+    var optimizedImage = image.Optimize(ImageFormat.Jpeg, ImageQuality.UltraLow);  
 
 }
-
-<table>
-    <tr>
-        <td>Optimized image</td>
-        <td><img src="@optimizedImage.ToDataUri(ImageFormat.Jpeg)" width="300"/></td>
-    </tr>
-    <tr>
-        <td>Resize image</td>
-        <td>
-            <img src="@optimizedImage.Resize(new Size(300, 300)).ToDataUri(ImageFormat.Png)"/>
-            <img src="@optimizedImage.Resize(new Size(300, 300), Color.Transparent).ToDataUri(ImageFormat.Png)"/>
-            <img src="@optimizedImage.Resize(new Size(300, 300), Color.Transparent, false).ToDataUri(ImageFormat.Png)"/>
-            <img src="@optimizedImage.ResizeByWidth(300, Color.Transparent).ToDataUri(ImageFormat.Png)"/>
-            <img src="@optimizedImage.ResizeByHeight(300, Color.Transparent).ToDataUri(ImageFormat.Png)"/>
-        </td>
-    </tr>
-    <tr>
-        <td>Crop image </td>
-        <td><img src="@optimizedImage.Resize(new Size(300, 300)).Crop(new Point(100, 100), new Size(100, 100)).ToDataUri(ImageFormat.Jpeg)"/></td>
-    </tr>
-    <tr>
-        <td>Crop background </td>
-         <td>
-             <img src="@optimizedImage.Resize(new Size(300, 300), Color.Aqua).ToDataUri(ImageFormat.Png)"/>
-             <img src="@optimizedImage.Resize(new Size(300, 300), Color.Aqua).CropBackground().ToDataUri(ImageFormat.Png)"/>
-         </td>
-    </tr>
-
-    <tr>
-        <td>Grayscale</td>
-        <td><img src="@optimizedImage.Grayscale().ToDataUri(ImageFormat.Jpeg)" width="300"/></td>
-    </tr>
-
-    <tr>
-        <td>Erosion</td>
-        <td><img src="@optimizedImage.Resize(new Size(300, 300)).Erosion(5).CropBackground().ToDataUri(ImageFormat.Jpeg)" width="300"/></td>
-    </tr>
-
-    <tr>
-        <td>Erosion edge</td>
-        <td><img src="@optimizedImage.Resize(new Size(300, 300)).Erosion(5, true, true, true, MorphologyEdgeType.Edge).CropBackground().ToDataUri(ImageFormat.Jpeg)" width="300"/></td>
-    </tr>
-
-     <tr>
-        <td>Erosion edge sharpen</td>
-        <td><img src="@optimizedImage.Resize(new Size(300, 300)).Erosion(5, true, false, true, MorphologyEdgeType.EdgeSharpen).CropBackground().ToDataUri(ImageFormat.Jpeg)" width="300"/></td>
-    </tr>
-
-    <tr>
-        <td>Dilation</td>
-        <td><img src="@optimizedImage.Resize(new Size(300, 300)).Dilation(5).CropBackground().ToDataUri(ImageFormat.Jpeg)" width="300"/></td>
-    </tr>
-
-    <tr>
-        <td>Dilation edge</td>
-        <td><img src="@optimizedImage.Resize(new Size(300, 300)).Dilation(5, true, true, true, MorphologyEdgeType.Edge).CropBackground().ToDataUri(ImageFormat.Jpeg)" width="300"/></td>
-    </tr>
-
-    <tr>
-        <td>Dilation edge sharpen</td>
-        <td><img src="@optimizedImage.Resize(new Size(300, 300)).Dilation(5, true, false, true, MorphologyEdgeType.EdgeSharpen).CropBackground().ToDataUri(ImageFormat.Jpeg)" width="300"/></td>
-    </tr>
-
-    <tr>
-        <td>Channel</td>
-        <td><img src="@optimizedImage.Resize(new Size(300, 300)).Channel(Rgb.Green).ToDataUri(ImageFormat.Jpeg)" width="300"/></td>
-    </tr>
-
-    <tr>
-        <td>Overlay</td>
-        <td><img src="@optimizedImage.Resize(new Size(300, 300)).Overlay(Brushes.Chocolate).ToDataUri(ImageFormat.Jpeg)" width="300"/></td>
-    </tr>
-
-    <tr>
-        <td>Sobel</td>
-        <td><img src="@optimizedImage.Resize(new Size(300, 300)).Sobel().ToDataUri(ImageFormat.Jpeg)" width="300"/></td>
-    </tr>
-
-     <tr>
-        <td>Overlay sobel</td>
-        <td><img src="@optimizedImage.Resize(new Size(300, 300)).Overlay(optimizedImage.Resize(new Size(300, 300)).Sobel()).ToDataUri(ImageFormat.Jpeg)" width="300"/></td>
-    </tr>
-
-    <tr>
-        <td>Blur</td>
-        <td><img src="@optimizedImage.Resize(new Size(300, 300)).Blur().ToDataUri(ImageFormat.Jpeg)" width="300"/></td>
-    </tr>
-
-</table>
 
 </body>
 </html>

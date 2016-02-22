@@ -1,12 +1,14 @@
 ﻿namespace Framework.AssetLibrary.Imaging
 {
     public enum ImageQuality
-    {        
-        VeryLow = 5,      
-        Low = 25,    
+    {
+        UltraLow = 0,
+        VeryLow = 20,      
+        Low = 35,    
         Medium = 50,     
         High = 75,    
-        VeryHigh = 100,
+        VeryHigh = 90,
+        UltraHigh = 100,
         Web = 60
     }
 }

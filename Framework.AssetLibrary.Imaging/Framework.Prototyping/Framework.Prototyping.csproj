@@ -89,6 +89,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="code.txt" />
     <Content Include="Global.asax" />
     <Content Include="Images\sample.jpg" />
     <Content Include="Web.config" />

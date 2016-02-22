@@ -392,7 +392,7 @@ namespace Framework.AssetLibrary.Imaging
 
                 EncoderParameters myEncoderParameters = new EncoderParameters(1);
 
-                EncoderParameter myEncoderParameter = new EncoderParameter(myEncoder, (int)quality);
+                EncoderParameter myEncoderParameter = new EncoderParameter(myEncoder, (long)quality);
 
                 myEncoderParameters.Param[0] = myEncoderParameter;
 
