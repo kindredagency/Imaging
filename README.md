@@ -4,9 +4,9 @@
 
 Add the following namespaces: 
 
-> * @using System.Drawing
-> * @using System.Drawing.Imaging
-> * @using Framework.AssetLibrary.Imaging
+> * using System.Drawing;
+> * using System.Drawing.Imaging;
+> * using Framework.AssetLibrary.Imaging;
 
 ```C# 
 //Load the image
