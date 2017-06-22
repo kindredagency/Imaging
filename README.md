@@ -21,20 +21,7 @@ Image image = ImageFactory.Read(imagePath);
 
 The following are the available transformations.
 
-```c#
-using Microsoft.Extensions.DependencyInjection;
-using Text.Extract;
-using Text.Extract.Tag;
-using Text.Extract.Factory;
-using Text.Search;
-using Text.Search.Factory;
-using Text.NaturalLanguageProcessing;
-using Text.Prototyping.Models;
-```
-
-Once setup use the following code to use the libraries
-
-### Console application
+### Method calls
 
 ```C#
 //Image otimization
