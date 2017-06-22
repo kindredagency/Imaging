@@ -81,10 +81,10 @@ image.Resize(new Size(300, 300)).Overlay(Brushes.Chocolate);
 image.Resize(new Size(300, 300)).Sobel();
 
 //Image sobel overlay
-image.Resize(new Size(300, 300)).Overlay(optimizedImage.Resize(new Size(300, 300)).Sobel())
+image.Resize(new Size(300, 300)).Overlay(optimizedImage.Resize(new Size(300, 300)).Sobel());
 
 //Image blur filter
-image.Resize(new Size(300, 300)).Blur()
+image.Resize(new Size(300, 300)).Blur();
 
 ```
 
