@@ -2,6 +2,10 @@
 
 ### Setup.
 
+The nuget package for the library can be found on NuGet.org here : https://www.nuget.org/packages/Framework.AssetLibrary.Imaging/
+
+Install the nuget package.
+
 Add the following namespaces: 
 
 > * using System.Drawing;
